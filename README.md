@@ -33,6 +33,37 @@ Run as Administrator. You will be prompted to confirm each major action.
 
 ---
 
+---
+
+### Get-EntraPasswordExpiry.ps1
+
+Checks password expiry status for a specific user in Entra ID (Azure AD) using Microsoft Graph.
+
+**Use this when:**
+
+- You need to quickly check when a user's password expires
+- Helpdesk staff need to verify password status without full admin portal access
+- You want to identify accounts with password expiration disabled
+
+**What it does:**
+
+- Accepts UPN, SAMAccountName, or email address as input
+- Queries Microsoft Graph for last password change date and password policies
+- Calculates expiry date based on your org's password age policy (default: 90 days)
+- Displays account enabled/disabled status and days remaining
+- Handles cloud-only and AD-synced accounts
+
+**Prerequisites:** Microsoft.Graph PowerShell module
+
+**Usage:**
+```
+.\Get-EntraPasswordExpiry.ps1
+```
+
+Run as a user with `User.Read.All` Graph permission. You will be prompted to enter a username.
+
+> **Note:** Update `$orgAgeDays` in the script to match your tenant's password expiry policy if it differs from 90 days.
+
 ## Disclaimer
 
 Scripts are provided as-is. Always test in a non-production environment first.
