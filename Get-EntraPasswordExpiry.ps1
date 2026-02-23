@@ -1,7 +1,7 @@
 # ============================================================
 # Get-EntraPasswordExpiry.ps1
 # Check password expiry for a specific user in Entra ID
-# Author: Ash Chowdhury | 24-02-2026 | V 1.0
+# Author: Ash C | 24-02-2026 | V 1.0
 # ============================================================
 
 # Microsoft Graph module
